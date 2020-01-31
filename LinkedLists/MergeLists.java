@@ -33,6 +33,7 @@ public class MergeLists {
         return head.next;
     }
 
+    // list node class
     public class ListNode { 
         int val; 
         ListNode next; 
