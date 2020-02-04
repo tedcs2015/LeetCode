@@ -1,7 +1,7 @@
 public class RotateImage {
 	/*
 	 * Time complexity : O(N^2)
-     * Space complexity : O(1)
+     	 * Space complexity : O(1)
 	 */
 	public static void rotate(int[][] matrix) {
         if(matrix == null || matrix.length == 0)
