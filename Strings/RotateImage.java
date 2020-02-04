@@ -1,15 +1,19 @@
 public class RotateImage {
+	/*
+	 * Time complexity : O(N^2)
+     * Space complexity : O(1)
+	 */
 	public static void rotate(int[][] matrix) {
         if(matrix == null || matrix.length == 0)
         	return;
         
         int N = matrix.length;
-        // first transpose matrix
+        // transpose matrix
         for(int i = 0; i < N; i++) {
         	for(int j = i; j < N; j++) {
-        		int temp = matrix[j][i];
-        		matrix[j][i] = matrix[i][j];
-        		matrix[i][j] = temp;
+        		int temp = matrix[i][j];
+        		matrix[i][j] = matrix[j][i];
+        		matrix[j][i] = temp;
         	}
         }
         
