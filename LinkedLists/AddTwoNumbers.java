@@ -4,14 +4,14 @@
  * Explanation: 342 + 465 = 807.
  */
 public class AddTwoNumbers {
-    /*
-     * Add two numbers iteratively
+    /**
+     * Iteratively Approach
      * 
 	 * Time complexity : O(max(m,n)). Assume that m and n represents the length of l1 and l2 
 	 * 					respectively, the algorithm above iterates at most max(m,n) times.
 	 * Space complexity : O(max(m,n)). The length of the new list is at most max(m,n)+1.
 	 */
-    public static ListNode addTwoNumbers(ListNode l1, ListNode l2) {
+    public ListNode addTwoNumbers(ListNode l1, ListNode l2) {
     	if(l1 == null && l2 == null)
     		return null;
     	
@@ -38,20 +38,20 @@ public class AddTwoNumbers {
     	return head.next;
     }
     
-    /*
-     * Add two numbers recursively
+    /**
+     * Iteratively Approach
      * 
 	 * Time complexity : O(max(m,n)). Assume that m and n represents the length of l1 and l2 
 	 * 					respectively, the algorithm above iterates at most max(m,n) times.
 	 * Space complexity : O(max(m,n)). The length of the new list is at most max(m,n)+1.
 	 */
-    public static ListNode addTwoNumbers2(ListNode l1, ListNode l2) {
+    public ListNode addTwoNumbers2(ListNode l1, ListNode l2) {
     	if(l1 == null && l2 == null)
     		return null;
     	return helper(l1,l2,0);
     }
     
-    private static ListNode helper(ListNode l1, ListNode l2, int carry) {
+    private ListNode helper(ListNode l1, ListNode l2, int carry) {
     	if(l1 == null && l2 == null) {
     		if(carry == 0)
     			return null;

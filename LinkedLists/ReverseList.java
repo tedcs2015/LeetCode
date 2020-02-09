@@ -1,49 +1,50 @@
-package linkedList;
+package LinkedLists;
 
 /**
- * Reverse the given linked list
+ * Reverse a linked list
  */
 public class ReverseList {
-	/*
-	 * Time complexity : O(n). Assume that n is the list's length, the time complexity is O(n).
+	/**
+	 * Iterative Approach
+	 * 
+	 * Time complexity : O(n). n is the list's length.
 	 * Space complexity : O(1).
 	 */
 	public ListNode reverseList(ListNode head) {
-		 if(head == null || head.next == null)
-			 return head;
-		 
-		 ListNode prev = null, curr = head;
-		 while(curr != null) {
-			 ListNode next = curr.next;
-			 curr.next = prev;
-			 prev = curr;
-			 curr = next;
-		 }
-		 
-		 return prev;
-	}
+        if(head == null || head.next == null)
+        	return head;
+        
+        ListNode prev = null, curr = head;
+        while(curr != null) {
+        	ListNode n = curr.next;
+        	curr.next = prev;
+        	prev = curr;
+        	curr = n;
+        }
+        return prev;
+    }
 	
-	/*
-	 * Time complexity : O(n). Assume that n is the list's length, the time complexity is O(n).
+	/**
+	 * Recursive Approach
+	 * 
+	 * Time complexity : O(n). n is the list's length.
 	 * Space complexity : O(n). The extra space comes from implicit stack space due to recursion. 
-	 * 		              The recursion could go up to n levels deep.
 	 */
 	public ListNode reverseListRecursive(ListNode head) {
-		if(head == null || head.next == null)
-			 return head;
-		
-		ListNode p = reverseListRecursive(head.next);
-		head.next.next = head;
-		head.next = null;
-		
-		return p;
-	}	
+        if(head == null || head.next == null)
+        	return head;
+        
+        ListNode n = reverseListRecursive(head.next);
+    	head.next.next = head;
+        head.next = null;
+        return n;
+	}
 
 	public class ListNode {
 		int val;
 		ListNode next;
-		public ListNode(int x) {
-			val = x;
+		public ListNode(int v) {
+			val = v;
 		}
 	}
 }

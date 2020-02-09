@@ -5,7 +5,7 @@ public class SpiralMatrix {
 	 * Time Complexity: O(N), where N is the total number of elements in the input matrix.
 	 * Space Complexity: O(N), the information stored in res.
 	 */
-	public static List<Integer> spiralOrder(int[][] matrix) {
+	public List<Integer> spiralOrder(int[][] matrix) {
 		List<Integer> res = new ArrayList<Integer>();
         if(matrix == null || matrix.length == 0 || matrix[0].length == 0)
         	return res;
