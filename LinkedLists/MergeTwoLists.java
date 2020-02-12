@@ -1,5 +1,5 @@
 
-public class MergeLists {
+public class MergeTwoLists {
     /*
      * Time complexity : O(n+m) - n and m are the lengths of l1 and l2.
      * Space complexity : O(1).
@@ -34,7 +34,7 @@ public class MergeLists {
         return head.next;
     }
 
-    // list node class
+    // Inner list node class
     public class ListNode { 
         int val; 
         ListNode next; 
