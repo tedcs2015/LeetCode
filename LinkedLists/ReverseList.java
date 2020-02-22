@@ -1,5 +1,3 @@
-package LinkedLists;
-
 /**
  * Reverse a linked list
  */
