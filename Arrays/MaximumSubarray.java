@@ -4,7 +4,7 @@ public class MaximumSubarray {
 	 *      Time complexity : O(N) since it's one pass along the array.
 	 *      Space complexity : O(1), since it's a constant space solution.
 	 */
-	public static int maxSubArray(int[] nums) {
+	public int maxSubArray(int[] nums) {
 		if(nums == null || nums.length == 0)
 			throw new IllegalArgumentException();
 		
