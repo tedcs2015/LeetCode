@@ -1,4 +1,8 @@
 public class HappyNumber {
+	/*
+	 * Time complexity: O(NlogN)
+	 * Space complexity: O(1)
+	 */
 	public boolean isHappy(int n) {
 		int slow = n, fast = getSquare(n);
 		while(fast != 1 && slow != fast) {
