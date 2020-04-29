@@ -7,7 +7,7 @@ public class GroupAnagrams {
 	 * 		through each string. Then, we sort each string in O(KlogK) time.
 	 * Space Complexity: O(NK), the total information content stored in res.
 	 */
-	public static List<List<String>> groupAnagrams(String[] strs) {
+	public List<List<String>> groupAnagrams(String[] strs) {
 		List<List<String>> res = new ArrayList<List<String>>();
 		if(strs == null || strs.length == 0)
     		return res;
@@ -31,7 +31,7 @@ public class GroupAnagrams {
 		return res;
     }
 	
-	private static String sort(String s) {
+	private String sort(String s) {
 		char[] arr = s.toCharArray();
 		Arrays.sort(arr);
 		return new String(arr);

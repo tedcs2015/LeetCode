@@ -1,10 +1,13 @@
-package stringAndArrays;
-
 public class RemoveVowels {
+	/*
+	 * Time Complexity: O(N)
+	 * Space Complexity: O(N)
+	 */
     public String removeVowels(String S) {
     	 if(S == null || S.isEmpty())
          	return S;
-         
+		 
+		 S = S.toLowerCase();
     	 StringBuilder sb = new StringBuilder();
     	 for(int i = 0; i < S.length(); i++) {
     		 char c = S.charAt(i);
