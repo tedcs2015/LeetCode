@@ -34,7 +34,7 @@ public class ThreeSumClosest {
 		Arrays.sort(nums);
 		
 		// use two pointer technique to find the closest
-		for(int i = 0; i < nums.length && closest != 0; i++) {
+		for(int i = 0; i < nums.length-2 && closest != 0; i++) {
 			int lo = i+1, hi = nums.length-1;
 			while(lo < hi) {
 				int sum = nums[i] + nums[lo] + nums[hi];
