@@ -24,8 +24,7 @@ public class ThreeSumClosest {
 
 	/*
 	 * Time complexity: O(n^2). The time it takes for the nested loop.
-	 * Space complexity: from O(logn) to O(n), depending on the 
-	 * 					 implementation of the sorting algorithm.
+	 * Space complexity: from O(logn) to O(n), depending on the implementation of the sorting algorithm.
 	 */
 	public static int threeSumClosest(int[] nums, int target) {
 		// assign closest a max num
