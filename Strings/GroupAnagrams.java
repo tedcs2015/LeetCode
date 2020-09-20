@@ -14,12 +14,9 @@ public class GroupAnagrams {
 		
 		// map: sorted word -> list of anagrams
 		Map<String, List<String>> map  = new HashMap<String, List<String>>();
-		for(int i = 0; i < strs.length; i++) {
-			String word = strs[i];
+		for(String word : strs) {
 			String sorted = sort(word);
-			
-			// check if map contains sorted string
-			if(!map.containsKey(sorted)) {
+			if(!map.containsKey(sorted)) {  // sorted string not in map
 				map.put(sorted, new ArrayList<String>());
 			}
 			map.get(sorted).add(word);
